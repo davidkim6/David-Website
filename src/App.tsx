@@ -1,25 +1,25 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from "./pages/Home";
+import Intro from "./pages/Intro";
 import Projects from "./pages/Projects";
 import ProjectDetail from "./pages/ProjectDetail";
+import Skills from "./pages/Skills";
+import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import React from 'react';
 
 import './App.css';
+import './styles/global.css';
 
 function App() {
   return (
-    <BrowserRouter>
-    <Navbar />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/projects" element={<Projects />} />
-      <Route path="/projects/:id" element={<ProjectDetail />} />
-      <Route path="/contact" element={<Contact />} />
-    </Routes>
-      
-    </BrowserRouter>
+    <div>
+      <Navbar />
+      <Intro />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Contact />
+    </div>
    
   );
 }
